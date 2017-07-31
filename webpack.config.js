@@ -1,15 +1,16 @@
 var path = require('path');
+var webpack = require('webpack');
 module.exports = {
 	entry: [
-		'./src/entry.js'
+		'./src/main.js'
 	],
 	output: {
-		filename: 'bundle.js',
+		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	},
-	devtool: 'inline-source-map',
+	// devtool: 'inline-source-map',
 	devServer: {
-		contentBase: './dist'
+		// contentBase: false
 	},
 	module: {
 		loaders: [
